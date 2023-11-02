@@ -1,0 +1,232 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Fonts/Fuente.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Imagenes/Imagen1.png" type="Texture" id=2]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=3]
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=4]
+[ext_resource path="res://BotonNoSeleccionado.tres" type="StyleBox" id=5]
+[ext_resource path="res://BotonSeleccionado.tres" type="StyleBox" id=6]
+[ext_resource path="res://Atras2.gd" type="Script" id=7]
+[ext_resource path="res://Siguiente.gd" type="Script" id=8]
+[ext_resource path="res://Audio/Seleccion.wav" type="AudioStream" id=9]
+[ext_resource path="res://Preguntas.gd" type="Script" id=10]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/CollegiateFLF.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 64
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Fonts/CollegiateFLF.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+font_data = SubResource( 7 )
+
+[node name="Preguntas" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.16717
+margin_top = 0.0883789
+margin_right = 1.16711
+margin_bottom = 0.0883789
+color = Color( 0.152941, 0.490196, 0.360784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 230.683
+margin_top = 106.769
+margin_right = 1065.69
+margin_bottom = 173.769
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.956863, 0.556863, 0.0509804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Preguntas y Respuestas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pregunta" type="Label" parent="."]
+margin_left = 269.339
+margin_top = 180.104
+margin_right = 1008.34
+margin_bottom = 214.104
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+text = "Interprete la siguiente imagen y responda"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 691.038
+margin_top = 251.873
+margin_right = 1178.04
+margin_bottom = 490.873
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Respuesta1" type="Button" parent="."]
+margin_left = 76.706
+margin_top = 249.159
+margin_right = 332.706
+margin_bottom = 313.159
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Respuesta1"]
+margin_left = 32.0
+margin_top = 16.0
+margin_right = 232.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+text = "Respuesta 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Respuesta2" type="Button" parent="."]
+margin_left = 75.8017
+margin_top = 342.259
+margin_right = 331.803
+margin_bottom = 406.259
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Respuesta2"]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 230.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+text = "Respuesta 2"
+
+[node name="Respuesta3" type="Button" parent="."]
+margin_left = 79.9987
+margin_top = 439.998
+margin_right = 335.999
+margin_bottom = 503.998
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Respuesta3"]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 231.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+text = "Respuesta 3"
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 19.0
+margin_top = 18.0
+margin_right = 276.0
+margin_bottom = 96.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Atras"]
+margin_left = 24.0
+margin_top = 8.0
+margin_right = 234.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+text = "Atras"
+
+[node name="Siguiente" type="Button" parent="."]
+margin_left = 845.559
+margin_top = 610.828
+margin_right = 1221.56
+margin_bottom = 682.828
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/normal = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Siguiente"]
+margin_left = 32.0
+margin_top = 8.0
+margin_right = 348.0
+margin_bottom = 75.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+text = "Siguiente"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Feedback" type="ColorRect" parent="."]
+margin_left = 37.0
+margin_top = 543.0
+margin_right = 812.0
+margin_bottom = 699.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Feedback"]
+margin_left = 17.0
+margin_top = 8.0
+margin_right = 351.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Retroalimentacion"
+
+[node name="seleccion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[connection signal="mouse_entered" from="Respuesta1" to="." method="_on_Respuesta1_mouse_entered"]
+[connection signal="mouse_entered" from="Respuesta2" to="." method="_on_Respuesta2_mouse_entered"]
+[connection signal="mouse_entered" from="Respuesta3" to="." method="_on_Respuesta3_mouse_entered"]
+[connection signal="mouse_entered" from="Atras" to="." method="_on_Atras_mouse_entered"]
+[connection signal="pressed" from="Atras" to="Atras" method="_on_Atras_pressed"]
+[connection signal="mouse_entered" from="Siguiente" to="." method="_on_Siguiente_mouse_entered"]
+[connection signal="pressed" from="Siguiente" to="Siguiente" method="_on_Siguiente_pressed"]

@@ -1,0 +1,779 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://Fonts/Fuente.tres" type="DynamicFont" id=1]
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=2]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=3]
+[ext_resource path="res://Actividad2.gd" type="Script" id=4]
+[ext_resource path="res://Imagenes/tabla nuevo 2.png" type="Texture" id=5]
+[ext_resource path="res://Imagenes/Ayuda (Personalizado).png" type="Texture" id=6]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Imagenes/WhatsApp Image 2021-11-07 at 9.39.10 PM (Personalizado).jpeg" type="Texture" id=8]
+[ext_resource path="res://Tiempo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://BotonSeleccionado.tres" type="StyleBox" id=10]
+[ext_resource path="res://Ayuda2.gd" type="Script" id=11]
+[ext_resource path="res://BotonNoSeleccionado.tres" type="StyleBox" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 74
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Fonts/CollegiateFLF.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = SubResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+font_data = SubResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+
+[sub_resource type="DynamicFont" id=9]
+size = 32
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 50
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 25
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 50
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 40
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 100
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 90
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 90
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 100
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 120
+font_data = ExtResource( 7 )
+
+[node name="Actividad2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 660.172
+margin_top = 200.715
+margin_right = 1267.17
+margin_bottom = 707.715
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 456.0
+margin_top = 8.0
+margin_right = 800.0
+margin_bottom = 93.0
+color = Color( 0.156863, 0.47451, 0.392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 509.0
+margin_top = 17.0
+margin_right = 747.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.321569, 1, 1 )
+text = "Cálculo"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+margin_left = 989.0
+margin_top = 8.0
+margin_right = 1117.0
+margin_bottom = 85.0
+color = Color( 0.156863, 0.47451, 0.392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tiempo" parent="." instance=ExtResource( 9 )]
+margin_left = 395.826
+margin_top = -76.2132
+margin_right = 395.825
+margin_bottom = -76.2132
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 12.0
+margin_top = 11.0
+margin_right = 236.0
+margin_bottom = 78.0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/normal = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Atras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = 250.0
+margin_top = 102.0
+margin_right = 1015.0
+margin_bottom = 192.0
+color = Color( 0.156863, 0.47451, 0.392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Actividad" type="Label" parent="."]
+margin_left = 256.52
+margin_top = 107.26
+margin_right = 995.52
+margin_bottom = 185.26
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.054902, 0.85098, 0.682353, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.41422
+margin_top = 203.0
+margin_right = -632.586
+margin_bottom = -344.0
+color = Color( 0.156863, 0.47451, 0.392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dato1" type="LineEdit" parent="."]
+margin_left = 35.5017
+margin_top = 290.502
+margin_right = 205.502
+margin_bottom = 351.502
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+clear_button_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dato2" type="LineEdit" parent="."]
+margin_left = 232.0
+margin_top = 293.0
+margin_right = 392.0
+margin_bottom = 354.0
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+clear_button_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resultado" type="LineEdit" parent="."]
+margin_left = 419.983
+margin_top = 291.753
+margin_right = 617.983
+margin_bottom = 352.753
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+clear_button_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Operador" type="Label" parent="."]
+margin_left = 206.622
+margin_top = 297.757
+margin_right = 230.622
+margin_bottom = 349.757
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Igualdad" type="Label" parent="."]
+margin_left = 396.232
+margin_top = 299.111
+margin_right = 423.232
+margin_bottom = 366.111
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AyudaDato1" type="Label" parent="."]
+visible = false
+margin_left = 4.0
+margin_top = 211.0
+margin_right = 201.0
+margin_bottom = 285.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AyudaDato2" type="Label" parent="."]
+visible = false
+margin_left = 204.0
+margin_top = 208.48
+margin_right = 426.0
+margin_bottom = 286.48
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AyudaResultado" type="Label" parent="."]
+visible = false
+margin_left = 433.0
+margin_top = 207.0
+margin_right = 644.0
+margin_bottom = 288.0
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 11.0
+margin_top = 551.0
+margin_right = 608.0
+margin_bottom = 716.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Respuesta" type="Label" parent="."]
+margin_left = 25.0
+margin_top = 561.0
+margin_right = 605.0
+margin_bottom = 705.0
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Validar" type="Button" parent="."]
+anchor_left = 0.000984287
+anchor_right = 0.000984287
+margin_left = 151.661
+margin_top = 428.845
+margin_right = 449.661
+margin_bottom = 511.845
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_fonts/font = SubResource( 16 )
+text = "Comprobar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadresAnual" type="Label" parent="."]
+margin_left = 967.0
+margin_top = 260.0
+margin_right = 1112.0
+margin_bottom = 288.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadresMensual" type="Label" parent="."]
+margin_left = 1119.0
+margin_top = 262.0
+margin_right = 1261.0
+margin_bottom = 287.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProduccionAnual" type="Label" parent="."]
+margin_left = 966.0
+margin_top = 311.0
+margin_right = 1111.0
+margin_bottom = 338.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProduccionMensual" type="Label" parent="."]
+margin_left = 1117.0
+margin_top = 311.0
+margin_right = 1260.0
+margin_bottom = 338.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProductividadAnual" type="Label" parent="."]
+margin_left = 966.0
+margin_top = 363.0
+margin_right = 1111.0
+margin_bottom = 390.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProductividadMensual" type="Label" parent="."]
+margin_left = 1118.0
+margin_top = 363.0
+margin_right = 1261.0
+margin_bottom = 391.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VentasAnual" type="Label" parent="."]
+margin_left = 969.0
+margin_top = 411.0
+margin_right = 1110.0
+margin_bottom = 440.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VentasMensual" type="Label" parent="."]
+margin_left = 1118.0
+margin_top = 410.0
+margin_right = 1261.0
+margin_bottom = 442.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IngresosAnual" type="Label" parent="."]
+margin_left = 967.0
+margin_top = 464.0
+margin_right = 1111.0
+margin_bottom = 493.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IngresosMensual" type="Label" parent="."]
+margin_left = 1118.0
+margin_top = 464.0
+margin_right = 1260.0
+margin_bottom = 494.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CostosAnual" type="Label" parent="."]
+margin_left = 968.333
+margin_top = 517.67
+margin_right = 1110.33
+margin_bottom = 546.67
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CostosMensual" type="Label" parent="."]
+margin_left = 1120.0
+margin_top = 516.0
+margin_right = 1261.0
+margin_bottom = 545.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BeneficioAnual" type="Label" parent="."]
+margin_left = 967.0
+margin_top = 566.0
+margin_right = 1111.0
+margin_bottom = 597.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BeneficioMensual" type="Label" parent="."]
+margin_left = 1116.0
+margin_top = 568.0
+margin_right = 1262.0
+margin_bottom = 597.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CapitalAnual" type="Label" parent="."]
+margin_left = 968.0
+margin_top = 617.0
+margin_right = 1112.0
+margin_bottom = 648.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CapitalMensual" type="Label" parent="."]
+margin_left = 1119.0
+margin_top = 617.0
+margin_right = 1260.0
+margin_bottom = 648.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RentabilidadAnual" type="Label" parent="."]
+margin_left = 968.0
+margin_top = 669.0
+margin_right = 1111.0
+margin_bottom = 699.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RentabilidadMensual" type="Label" parent="."]
+margin_left = 1119.0
+margin_top = 668.0
+margin_right = 1261.0
+margin_bottom = 700.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+margin_left = 255.0
+margin_top = 16.0
+margin_right = 438.0
+margin_bottom = 79.0
+color = Color( 0.156863, 0.47451, 0.392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Indicador" type="Label" parent="."]
+margin_left = 258.284
+margin_top = 27.7182
+margin_right = 374.284
+margin_bottom = 67.7182
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Puntos:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puntos" type="Label" parent="."]
+margin_left = 391.449
+margin_top = 30.7396
+margin_right = 431.449
+margin_bottom = 70.7396
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+margin_left = 1124.0
+margin_top = 3.0
+margin_right = 1252.0
+margin_bottom = 94.0
+color = Color( 0.945098, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ayuda" type="Label" parent="ColorRect5"]
+margin_left = 4.00708
+margin_top = -0.414993
+margin_right = 122.007
+margin_bottom = 39.585
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Ayuda"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect5"]
+margin_left = 40.3643
+margin_top = 34.0429
+margin_right = 90.3643
+margin_bottom = 88.0429
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AyudaBoton" type="Button" parent="ColorRect5"]
+margin_right = 128.0
+margin_bottom = 92.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ayuda2" type="ConfirmationDialog" parent="."]
+visible = true
+margin_left = 1012.65
+margin_top = 118.3
+margin_right = 1253.65
+margin_bottom = 227.3
+window_title = "Por favor, Confirma..."
+dialog_text = "El usar ayuda reduce la puntuación 
+de la pregunta a la mitad.
+¿Estas seguro que quieres usarla?"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToolButton" type="ToolButton" parent="."]
+margin_left = 1123.0
+margin_top = 4.0
+margin_right = 1250.0
+margin_bottom = 94.0
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+visible = false
+margin_left = 191.508
+margin_top = 36.5378
+margin_right = 1022.51
+margin_bottom = 270.538
+color = Color( 0.976471, 0.87451, 0.0313726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MensajeFinal" type="Label" parent="."]
+visible = false
+margin_left = 195.181
+margin_top = 50.4047
+margin_right = 1013.18
+margin_bottom = 253.405
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Se terminaron las preguntas!!"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+visible = false
+margin_left = 207.26
+margin_top = 292.0
+margin_right = 1020.26
+margin_bottom = 448.0
+color = Color( 1, 0.607843, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PuntajeFinalTexto" type="Label" parent="."]
+visible = false
+margin_left = 237.706
+margin_top = 323.54
+margin_right = 766.706
+margin_bottom = 414.54
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Puntaje Total:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PuntajeTotal" type="Label" parent="."]
+visible = false
+margin_left = 800.05
+margin_top = 327.579
+margin_right = 843.05
+margin_bottom = 418.579
+custom_fonts/font = SubResource( 23 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PuntajeMaximo" type="Label" parent="."]
+visible = false
+margin_left = 865.566
+margin_top = 328.839
+margin_right = 956.566
+margin_bottom = 419.839
+custom_fonts/font = SubResource( 23 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "/ 8"
+align = 1
+valign = 1
+
+[node name="VerResultados" type="Button" parent="."]
+visible = false
+margin_left = 198.66
+margin_top = 472.094
+margin_right = 1028.66
+margin_bottom = 636.094
+custom_styles/hover = ExtResource( 10 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/focus = ExtResource( 10 )
+custom_styles/normal = ExtResource( 12 )
+custom_fonts/font = SubResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VerResultados"]
+margin_left = 2.5199
+margin_right = 830.52
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Ver Resultado"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
+[connection signal="pressed" from="Validar" to="." method="_on_Validar_pressed"]
+[connection signal="confirmed" from="Ayuda2" to="." method="_on_Ayuda2_confirmed"]
+[connection signal="pressed" from="ToolButton" to="Ayuda2" method="_on_ToolButton_pressed"]
+[connection signal="pressed" from="VerResultados" to="." method="_on_VerResultados_pressed"]

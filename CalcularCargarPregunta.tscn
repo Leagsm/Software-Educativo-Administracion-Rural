@@ -1,0 +1,757 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://Fonts/Fuente.tres" type="DynamicFont" id=1]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=2]
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=3]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://CalcularCargarPregunta.gd" type="Script" id=5]
+[ext_resource path="res://Imagenes/tabla nuevo 2.png" type="Texture" id=6]
+[ext_resource path="res://Imagenes/Ayuda (Personalizado).png" type="Texture" id=8]
+[ext_resource path="res://ConfirmarCalculo.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxLine" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxLine" id=9]
+
+[sub_resource type="DynamicFont" id=10]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxLine" id=13]
+
+[sub_resource type="DynamicFont" id=14]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxLine" id=16]
+
+[sub_resource type="DynamicFont" id=17]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxLine" id=19]
+
+[sub_resource type="DynamicFont" id=20]
+size = 25
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 40
+font_data = ExtResource( 4 )
+
+[node name="CalcularCargarPregunta" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+dropdown_path = NodePath("OptionButton")
+
+[node name="Fondo" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.016e-05
+color = Color( 0.176471, 0.8, 0.713726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 7.66516
+margin_top = 7.0
+margin_right = 226.665
+margin_bottom = 79.0
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "Atras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_top = -0.002081
+anchor_bottom = -0.002081
+margin_left = 335.071
+margin_top = 0.912537
+margin_right = 955.071
+margin_bottom = 134.913
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 341.573
+margin_right = 946.573
+margin_bottom = 145.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.321569, 1, 1 )
+text = "Cargar pregunta de
+ \"Cálculo\""
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabla" type="TextureRect" parent="."]
+margin_left = 664.096
+margin_top = 200.325
+margin_right = 1271.1
+margin_bottom = 707.325
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadresAnual" type="LineEdit" parent="Tabla"]
+margin_left = 306.0
+margin_top = 41.0
+margin_right = 451.0
+margin_bottom = 85.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MadresMensual" type="LineEdit" parent="Tabla"]
+margin_left = 456.0
+margin_top = 41.0
+margin_right = 601.0
+margin_bottom = 86.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="ProduccionAnual" type="LineEdit" parent="Tabla"]
+margin_left = 305.0
+margin_top = 92.0
+margin_right = 451.0
+margin_bottom = 137.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="ProduccionMensual" type="LineEdit" parent="Tabla"]
+margin_left = 456.0
+margin_top = 92.0
+margin_right = 601.0
+margin_bottom = 138.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="ProductividadAnual" type="LineEdit" parent="Tabla"]
+margin_left = 307.0
+margin_top = 144.0
+margin_right = 451.0
+margin_bottom = 188.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="ProductividadMensual" type="LineEdit" parent="Tabla"]
+margin_left = 456.0
+margin_top = 144.0
+margin_right = 601.0
+margin_bottom = 189.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="VentasAnual" type="LineEdit" parent="Tabla"]
+margin_left = 307.0
+margin_top = 195.0
+margin_right = 451.0
+margin_bottom = 241.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="VentasMensual" type="LineEdit" parent="Tabla"]
+margin_left = 456.0
+margin_top = 196.0
+margin_right = 601.0
+margin_bottom = 241.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="IngresosAnual" type="LineEdit" parent="Tabla"]
+margin_left = 306.0
+margin_top = 247.0
+margin_right = 452.0
+margin_bottom = 292.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="IngresosMensual" type="LineEdit" parent="Tabla"]
+margin_left = 457.0
+margin_top = 248.0
+margin_right = 601.0
+margin_bottom = 293.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="CostosAnual" type="LineEdit" parent="Tabla"]
+margin_left = 306.0
+margin_top = 299.0
+margin_right = 451.0
+margin_bottom = 343.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="CostosMensual" type="LineEdit" parent="Tabla"]
+margin_left = 456.0
+margin_top = 299.0
+margin_right = 601.0
+margin_bottom = 344.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="BeneficioAnual" type="LineEdit" parent="Tabla"]
+margin_left = 306.0
+margin_top = 349.0
+margin_right = 451.0
+margin_bottom = 395.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="BeneficioMensual" type="LineEdit" parent="Tabla"]
+margin_left = 456.0
+margin_top = 350.0
+margin_right = 601.0
+margin_bottom = 395.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="CapitalAnual" type="LineEdit" parent="Tabla"]
+margin_left = 306.0
+margin_top = 402.0
+margin_right = 451.0
+margin_bottom = 447.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="CapitalMensual" type="LineEdit" parent="Tabla"]
+anchor_top = -0.00165842
+anchor_bottom = -0.00165842
+margin_left = 457.0
+margin_top = 403.841
+margin_right = 600.0
+margin_bottom = 446.841
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RentabilidadAnual" type="LineEdit" parent="Tabla"]
+margin_left = 305.0
+margin_top = 454.0
+margin_right = 450.0
+margin_bottom = 498.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RentabilidadMensual" type="LineEdit" parent="Tabla"]
+margin_left = 457.0
+margin_top = 454.0
+margin_right = 599.0
+margin_bottom = 497.0
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tabla2" type="Label" parent="."]
+margin_left = 759.305
+margin_top = 148.952
+margin_right = 1189.31
+margin_bottom = 199.952
+rect_pivot_offset = Vector2( -694.436, 76.2481 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Datos para resolver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CargarPregunta" type="Button" parent="."]
+margin_left = 8.0
+margin_top = 611.0
+margin_right = 647.0
+margin_bottom = 714.0
+custom_fonts/font = ExtResource( 1 )
+text = "Cargar Pregunta"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Actividad" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 128.0
+margin_right = 372.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( 203.788, 70.9412 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Problema a resolver:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Actividad"]
+margin_left = -8.0
+margin_top = 44.0
+margin_right = 632.0
+margin_bottom = 92.0
+
+[node name="LineEdit" type="LineEdit" parent="Actividad"]
+margin_left = -8.0
+margin_top = 44.0
+margin_right = 632.0
+margin_bottom = 92.0
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="OptionButton" parent="."]
+margin_left = 160.0
+margin_top = 272.0
+margin_right = 216.0
+margin_bottom = 329.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dato2" type="Label" parent="."]
+margin_left = 224.0
+margin_top = 240.0
+margin_right = 352.0
+margin_bottom = 280.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Dato 2:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Dato2"]
+margin_left = 1.0
+margin_top = 40.0
+margin_right = 128.0
+margin_bottom = 88.0
+
+[node name="LineEdit" type="LineEdit" parent="Dato2"]
+margin_top = 40.0
+margin_right = 127.0
+margin_bottom = 88.0
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dato1" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 240.0
+margin_right = 160.0
+margin_bottom = 280.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Dato 1:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Dato1"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 128.0
+margin_bottom = 88.0
+
+[node name="LineEdit" type="LineEdit" parent="Dato1"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 128.0
+margin_bottom = 88.0
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Igual" type="Label" parent="."]
+margin_left = 360.0
+margin_top = 288.0
+margin_right = 400.0
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.054902, 0.85098, 0.682353, 1 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resultado" type="Label" parent="."]
+margin_left = 414.563
+margin_top = 238.757
+margin_right = 587.563
+margin_bottom = 278.757
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Resultado:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Resultado"]
+margin_left = -8.94385
+margin_top = 41.3929
+margin_right = 183.056
+margin_bottom = 89.3929
+
+[node name="LineEdit" type="LineEdit" parent="Resultado"]
+margin_left = -8.0
+margin_top = 41.3929
+margin_right = 184.0
+margin_bottom = 89.3929
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="Retroalimentacion" type="Label" parent="."]
+margin_left = 9.33878
+margin_top = 331.204
+margin_right = 255.339
+margin_bottom = 396.204
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Retroalimentación Positiva:"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Retroalimentacion"]
+margin_left = 7.0
+margin_top = 61.0
+margin_right = 263.0
+margin_bottom = 109.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Retroalimentacion"]
+margin_left = 7.18921
+margin_top = 61.3784
+margin_right = 261.189
+margin_bottom = 109.378
+custom_styles/normal = SubResource( 16 )
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retroalimentacion2" type="Label" parent="."]
+margin_left = 335.962
+margin_top = 328.8
+margin_right = 572.962
+margin_bottom = 393.8
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Retroalimentación Negativa:"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Retroalimentacion2"]
+margin_left = -17.962
+margin_top = 59.2005
+margin_right = 248.038
+margin_bottom = 114.2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Retroalimentacion2"]
+margin_left = -18.0
+margin_top = 60.0
+margin_right = 247.0
+margin_bottom = 112.0
+custom_styles/normal = SubResource( 19 )
+custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CargarAyuda" type="ColorRect" parent="."]
+margin_left = 8.70709
+margin_top = 445.0
+margin_right = 645.707
+margin_bottom = 583.0
+color = Color( 0.945098, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ayuda" type="Label" parent="CargarAyuda"]
+margin_left = 5.98531
+margin_top = 14.9671
+margin_right = 123.985
+margin_bottom = 54.9671
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Ayuda"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="CargarAyuda"]
+margin_left = 39.2929
+margin_top = 55.2271
+margin_right = 89.2929
+margin_bottom = 109.227
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dato1" type="Label" parent="CargarAyuda"]
+margin_left = 133.808
+margin_top = 22.2929
+margin_right = 264.808
+margin_bottom = 62.2929
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Dato 1:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CargarAyuda/Dato1"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 128.0
+margin_bottom = 88.0
+
+[node name="LineEdit" type="LineEdit" parent="CargarAyuda/Dato1"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 128.0
+margin_bottom = 88.0
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dato2" type="Label" parent="CargarAyuda"]
+margin_left = 274.016
+margin_top = 21.0942
+margin_right = 402.016
+margin_bottom = 61.0942
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Dato 2:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CargarAyuda/Dato2"]
+margin_left = 1.0
+margin_top = 40.0
+margin_right = 128.0
+margin_bottom = 88.0
+
+[node name="LineEdit" type="LineEdit" parent="CargarAyuda/Dato2"]
+margin_top = 40.0
+margin_right = 127.0
+margin_bottom = 88.0
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resultado" type="Label" parent="CargarAyuda"]
+margin_left = 426.536
+margin_top = 23.0711
+margin_right = 599.536
+margin_bottom = 63.0711
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Resultado:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CargarAyuda/Resultado"]
+margin_left = -3.24261
+margin_top = 35.9289
+margin_right = 188.757
+margin_bottom = 83.9289
+
+[node name="LineEdit" type="LineEdit" parent="CargarAyuda/Resultado"]
+margin_left = -3.24261
+margin_top = 35.9289
+margin_right = 188.757
+margin_bottom = 83.9289
+custom_styles/normal = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+
+[node name="ConfirmarCalculo" type="ConfirmationDialog" parent="."]
+visible = true
+margin_left = 186.0
+margin_top = 516.0
+margin_right = 386.0
+margin_bottom = 604.0
+window_title = "Por favor, Confirma..."
+dialog_text = "¿Estas seguro que quieres 
+agreguar esta pregunta??"
+dialog_autowrap = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToolButton" type="ToolButton" parent="."]
+margin_left = 10.0
+margin_top = 614.0
+margin_right = 647.0
+margin_bottom = 710.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SeCargo" type="AcceptDialog" parent="."]
+margin_left = 412.343
+margin_top = 540.657
+margin_right = 574.343
+margin_bottom = 598.657
+window_title = "Confirmación"
+dialog_text = "Se cargó su pregunta!!"
+dialog_autowrap = true
+
+[connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
+[connection signal="confirmed" from="ConfirmarCalculo" to="." method="_on_ConfirmarCalculo_confirmed"]
+[connection signal="pressed" from="ToolButton" to="ConfirmarCalculo" method="_on_ToolButton_pressed"]

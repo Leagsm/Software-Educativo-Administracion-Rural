@@ -1,0 +1,143 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Desaprobado.gd" type="Script" id=2]
+[ext_resource path="res://Audio/Desaprobado.wav" type="AudioStream" id=3]
+[ext_resource path="res://BotonSeleccionado.tres" type="StyleBox" id=4]
+[ext_resource path="res://Imagenes/des.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 70
+font_data = ExtResource( 1 )
+
+[node name="Desaprobado" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.435294, 0.772549, 0.776471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 539.716
+margin_top = 74.6079
+margin_right = 1281.72
+margin_bottom = 725.608
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_right = 1279.0
+margin_bottom = 147.0
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 1279.0
+margin_bottom = 148.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Que Pena!!. Tu nota no es la suficiente para aprobar esta actividad"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="."]
+margin_left = 24.8503
+margin_top = 171.766
+margin_right = 603.85
+margin_bottom = 375.766
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Consulta el Material de Repaso y vuelve a intentarlo"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Regresar" type="Button" parent="."]
+margin_left = 17.912
+margin_top = 384.731
+margin_right = 673.912
+margin_bottom = 552.731
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Regresar"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 646.0
+margin_bottom = 161.0
+custom_fonts/font = SubResource( 4 )
+text = "Regresar a Selección 
+de Actividad"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Referencia" type="Button" parent="."]
+margin_left = 15.5579
+margin_top = 566.368
+margin_right = 663.558
+margin_bottom = 663.368
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Referencia"]
+margin_left = 40.0
+margin_top = 16.0
+margin_right = 612.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 5 )
+text = "Material de Repaso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="desaprobado" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
+[connection signal="pressed" from="Referencia" to="." method="_on_Referencia_pressed"]

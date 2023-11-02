@@ -1,0 +1,112 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Fonts/Fuente.tres" type="DynamicFont" id=1]
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=2]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=3]
+[ext_resource path="res://Atras.gd" type="Script" id=4]
+[ext_resource path="res://Imagenes/bobbergenporkypig.jpg.644x794_q100-1 (Personalizado) (1).jpg" type="Texture" id=5]
+[ext_resource path="res://Audio/Seleccion.wav" type="AudioStream" id=6]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://AcercaDe.gd" type="Script" id=8]
+[ext_resource path="res://Audio/Creditos.wav" type="AudioStream" id=9]
+[ext_resource path="res://Imagenes/1123135561 (Personalizado).png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 7 )
+
+[node name="AcercaDe" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.49832
+margin_bottom = -1.49829
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.49829
+margin_bottom = -1.49829
+color = Color( 0.341176, 0.0156863, 0.054902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 21.0135
+margin_top = 20.5186
+margin_right = 259.014
+margin_bottom = 101.519
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/normal = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seleccion" type="AudioStreamPlayer" parent="Atras"]
+stream = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Atras"]
+margin_left = 16.4814
+margin_top = 4.49492
+margin_right = 226.481
+margin_bottom = 71.4949
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+text = "Atras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 202.459
+margin_top = 99.5415
+margin_right = 1143.46
+margin_bottom = 690.542
+custom_fonts/font = SubResource( 1 )
+text = "Software Educativo diseñado por:
+---------------------------------------------
+-Suárez Leandro German 
+
+Docente tutor:
+-------------------
+-Suárez Ruben Teodoro
+
+Dirigidos a alumnos de 4to año de 
+la carrera Ingeniería Agronoma UNRC"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 17.0397
+margin_top = 245.141
+margin_right = 397.04
+margin_bottom = 553.141
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Creditos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 993.718
+margin_top = 268.48
+margin_right = 1243.72
+margin_bottom = 518.48
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Atras" to="Atras" method="_on_Atras_pressed"]

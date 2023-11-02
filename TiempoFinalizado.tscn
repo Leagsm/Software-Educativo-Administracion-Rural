@@ -1,0 +1,130 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://BotonSeleccionado.tres" type="StyleBox" id=1]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://TiempoFinalizado.gd" type="Script" id=3]
+[ext_resource path="res://Imagenes/3 (Personalizado) (1).png" type="Texture" id=4]
+[ext_resource path="res://Audio/TiempoFinalizado.wav" type="AudioStream" id=5]
+[ext_resource path="res://Imagenes/3810885 (Personalizado).jpg" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 95
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 70
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = ExtResource( 2 )
+
+[node name="TiempoFinalizado" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 284.888
+margin_top = 6.34959
+margin_right = -239.112
+margin_bottom = -604.65
+color = Color( 0.67451, 0.207843, 0.207843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 14.4126
+margin_top = 8.0
+margin_right = 743.413
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Finalizo el tiempo!!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 678.683
+margin_top = 246.683
+margin_right = -101.317
+margin_bottom = -73.3168
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Regresar" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 216.0
+margin_right = 672.0
+margin_bottom = 384.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Regresar"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 646.0
+margin_bottom = 161.0
+custom_fonts/font = SubResource( 3 )
+text = "Regresar a Selección 
+de Actividad"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Referencia" type="Button" parent="."]
+margin_left = 24.0
+margin_top = 416.0
+margin_right = 672.0
+margin_bottom = 513.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Referencia"]
+margin_left = 40.0
+margin_top = 16.0
+margin_right = 612.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 4 )
+text = "Material de Repaso"
+
+[node name="fuego" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="Regresar" to="." method="_on_Regresar_pressed"]
+[connection signal="pressed" from="Referencia" to="." method="_on_Referencia_pressed"]

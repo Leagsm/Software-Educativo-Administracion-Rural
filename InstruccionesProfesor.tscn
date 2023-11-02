@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=1]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=2]
+[ext_resource path="res://InstruccionesProfesor.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/CollegiateFLF.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 110
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 5 )
+
+[node name="InstruccionesProfesor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.180392, 0.498039, 0.686275, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 17.478
+margin_top = 14.478
+margin_right = 247.478
+margin_bottom = 84.478
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Atras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 322.339
+margin_top = 4.783
+margin_right = 978.339
+margin_bottom = 115.783
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Instrucciones:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_top = 106.0
+margin_right = 1279.0
+margin_bottom = 721.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="."]
+margin_left = 17.7573
+margin_top = 110.586
+margin_right = 1259.76
+margin_bottom = 709.586
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Cargar Preguntas:
+
+-Ingrese a la opción \"Cargar Pregunta\".
+-Seleccione el tipo de pregunta que desea ingresar.
+-Si elige \"Interpretar Datos\": se debe carga la pregunta que desea hacer al estudiante, las diferentes respuestas, la retroalimentación de cada respuesta, los datos que se desea mostrar en la tabla, la ayuda de la pregunta y señalar la respuesta correcta. Luego ingresar la opción \"Cargar Pregunta\" y confirmar para cargar una nueva pregunta.
+-Si elige \"Cálculo\": se debe cargar el cálculo a resolver, los distintos datos, resultado y operador matematico, la retroalimentación positiva y negativa (segun la respuesta), las diferentes ayudas y los datos de la tabla que se utilizaran para resolver la actividad. Luego ingresar la opción \"Cargar Pregunta\" y confirmar para cargar una nueva pregunta."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]

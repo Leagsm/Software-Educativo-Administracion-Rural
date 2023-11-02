@@ -1,0 +1,159 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/Fuente.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ElegirActividad.gd" type="Script" id=2]
+[ext_resource path="res://Imagenes/3c05f873-3581-4cd7-aae1-9e748a303565 (Personalizado).png" type="Texture" id=3]
+[ext_resource path="res://Imagenes/calculo-de-fechas-en-excel-funciones-fin-mes-fecha-mes-dias360 (Personalizado).jpg" type="Texture" id=4]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=5]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 6 )
+
+[node name="ElegirActividad" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.50475e-05
+margin_bottom = -6.10352e-05
+color = Color( 0.109804, 0.580392, 0.615686, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 157.0
+margin_top = 161.0
+margin_right = 578.0
+margin_bottom = 717.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 674.0
+margin_top = 180.0
+margin_right = 1186.0
+margin_bottom = 714.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 16.9706
+margin_top = 15.5564
+margin_right = 238.971
+margin_bottom = 88.5564
+custom_styles/hover = ExtResource( 5 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 5 )
+custom_styles/normal = ExtResource( 5 )
+custom_fonts/font = ExtResource( 1 )
+text = "Atras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 345.66
+margin_top = 3.60719
+margin_right = 977.66
+margin_bottom = 188.607
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.321569, 1, 1 )
+text = "Elegir Actividad
+---------------------"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Actividad1" type="Label" parent="."]
+margin_left = 162.64
+margin_top = 157.929
+margin_right = 582.64
+margin_bottom = 288.929
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.054902, 0.85098, 0.682353, 1 )
+text = "Interpretación
+de Datos "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Actividad1"]
+margin_left = 19.4142
+margin_top = 130.368
+margin_right = 383.414
+margin_bottom = 557.368
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Interpretar" type="Button" parent="Actividad1/TextureRect"]
+margin_left = -23.0
+margin_top = -126.0
+margin_right = 396.0
+margin_bottom = 424.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Actividad2" type="Label" parent="."]
+margin_left = 806.374
+margin_top = 199.644
+margin_right = 1013.38
+margin_bottom = 263.644
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.054902, 0.85098, 0.682353, 1 )
+text = "Cálculo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Actividad2"]
+margin_left = -87.6815
+margin_top = 79.196
+margin_right = 339.319
+margin_bottom = 443.196
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Calcular" type="Button" parent="Actividad2/TextureRect"]
+margin_left = -44.0
+margin_top = -99.0
+margin_right = 467.0
+margin_bottom = 436.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
+[connection signal="pressed" from="Actividad1/TextureRect/Interpretar" to="." method="_on_Interpretar_pressed"]
+[connection signal="pressed" from="Actividad2/TextureRect/Calcular" to="." method="_on_Calcular_pressed"]

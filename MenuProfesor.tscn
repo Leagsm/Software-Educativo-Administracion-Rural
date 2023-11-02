@@ -1,0 +1,213 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=1]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=2]
+[ext_resource path="res://MenuProfesor.gd" type="Script" id=3]
+[ext_resource path="res://Imagenes/add-new-questions-add-question-icon-1156298351152eixf9qfh (Personalizado).png" type="Texture" id=4]
+[ext_resource path="res://Imagenes/1455554323_line-06_icon-icons.com_53324_2.png" type="Texture" id=5]
+[ext_resource path="res://Imagenes/calificacion (Personalizado).png" type="Texture" id=6]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fonts/CollegiateFLF.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 110
+font_data = ExtResource( 7 )
+
+[node name="MenuProfesor" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.180392, 0.686275, 0.568627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 17.478
+margin_top = 14.478
+margin_right = 247.478
+margin_bottom = 84.478
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Atras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 32.0
+margin_top = 128.0
+margin_right = 416.0
+margin_bottom = 640.0
+color = Color( 0.960784, 0.960784, 0.960784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2"]
+margin_left = 48.0
+margin_top = 8.0
+margin_right = 333.0
+margin_bottom = 163.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Agregar Pregunta"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect2"]
+margin_left = 72.0
+margin_top = 176.0
+margin_right = 328.0
+margin_bottom = 432.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 448.0
+margin_top = 128.0
+margin_right = 832.0
+margin_bottom = 640.0
+color = Color( 0.882353, 0.694118, 0.129412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect3"]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 376.0
+margin_bottom = 139.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Instrucciones"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect3"]
+margin_left = 64.0
+margin_top = 168.0
+margin_right = 320.0
+margin_bottom = 424.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = 856.0
+margin_top = 128.0
+margin_right = 1232.0
+margin_bottom = 640.0
+color = Color( 0.67451, 0.054902, 0.72549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ColorRect4"]
+margin_top = 8.0
+margin_right = 376.0
+margin_bottom = 136.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Calificaciones"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="ColorRect4"]
+margin_left = 80.0
+margin_top = 168.0
+margin_right = 336.0
+margin_bottom = 424.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CargarPreguntas" type="Button" parent="."]
+margin_left = 32.0
+margin_top = 128.0
+margin_right = 415.0
+margin_bottom = 640.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instrucciones" type="Button" parent="."]
+margin_left = 448.0
+margin_top = 128.0
+margin_right = 830.0
+margin_bottom = 640.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Calificaciones" type="Button" parent="."]
+margin_left = 856.0
+margin_top = 128.0
+margin_right = 1232.0
+margin_bottom = 640.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 384.0
+margin_top = 8.0
+margin_right = 888.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Profesor"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
+[connection signal="pressed" from="CargarPreguntas" to="." method="_on_CargarPreguntas_pressed"]
+[connection signal="pressed" from="Instrucciones" to="." method="_on_Instrucciones_pressed"]
+[connection signal="pressed" from="Calificaciones" to="." method="_on_Calificaciones_pressed"]

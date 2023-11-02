@@ -1,0 +1,195 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Imagenes/FONDO (Personalizado) (1).png" type="Texture" id=1]
+[ext_resource path="res://Imagenes/x2.png" type="Texture" id=2]
+[ext_resource path="res://Botones/BotonJugar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Botones/BotonInstrucciones.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Botones/BotonSalir.tscn" type="PackedScene" id=5]
+[ext_resource path="res://BotonSeleccionado.tres" type="StyleBox" id=6]
+[ext_resource path="res://Botones/BotonInstrucciones.gd" type="Script" id=7]
+[ext_resource path="res://Botones/BotonSalir.gd" type="Script" id=8]
+[ext_resource path="res://Fonts/Fuente.tres" type="DynamicFont" id=9]
+[ext_resource path="res://BotonNoSeleccionado.tres" type="StyleBox" id=10]
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=11]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=12]
+[ext_resource path="res://PantallaPrincipal.gd" type="Script" id=13]
+[ext_resource path="res://Imagenes/about_3697.png" type="Texture" id=14]
+[ext_resource path="res://Imagenes/systemshutdown_103390.png" type="Texture" id=15]
+[ext_resource path="res://Imagenes/directions_21799.png" type="Texture" id=16]
+[ext_resource path="res://Imagenes/22235pigface_98795.png" type="Texture" id=17]
+[ext_resource path="res://Audio/Seleccion.wav" type="AudioStream" id=18]
+[ext_resource path="res://Audio/Salir.wav" type="AudioStream" id=19]
+[ext_resource path="res://Fonts/OrangeJuice.tres" type="DynamicFont" id=20]
+
+[node name="PantallaPrincipal" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.49829
+margin_bottom = -1.49829
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1160.0
+margin_bottom = 640.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Menu"]
+margin_right = 1040.0
+margin_bottom = 185.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.988235, 0.572549, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Administración Rural
+Costo de Producción"
+align = 1
+
+[node name="Logo" type="TextureRect" parent="Menu"]
+visible = false
+margin_top = 91.0
+margin_right = 1040.0
+margin_bottom = 185.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="Centro" type="HBoxContainer" parent="Menu"]
+margin_top = 189.0
+margin_right = 1040.0
+margin_bottom = 560.0
+size_flags_vertical = 3
+
+[node name="Botones" type="VBoxContainer" parent="Menu/Centro"]
+margin_right = 1040.0
+margin_bottom = 371.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 50
+alignment = 1
+
+[node name="BotonJugar" parent="Menu/Centro/Botones" instance=ExtResource( 3 )]
+margin_top = 80.0
+margin_right = 1040.0
+margin_bottom = 160.0
+custom_styles/hover = ExtResource( 6 )
+custom_fonts/font = ExtResource( 9 )
+
+[node name="TextureRect" type="TextureRect" parent="Menu/Centro/Botones/BotonJugar"]
+margin_left = 128.0
+margin_top = 5.0
+margin_right = 200.0
+margin_bottom = 77.0
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonInstrucciones" parent="Menu/Centro/Botones" instance=ExtResource( 4 )]
+margin_top = 210.0
+margin_right = 1040.0
+margin_bottom = 290.0
+custom_styles/hover = ExtResource( 6 )
+script = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="Menu/Centro/Botones/BotonInstrucciones"]
+margin_left = 128.0
+margin_top = 3.0
+margin_right = 205.0
+margin_bottom = 77.0
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonSalir" parent="Menu/Centro/Botones" instance=ExtResource( 5 )]
+visible = false
+margin_top = 324.0
+margin_right = 1040.0
+margin_bottom = 404.0
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/normal = ExtResource( 11 )
+script = ExtResource( 8 )
+
+[node name="TextureRect" type="TextureRect" parent="Menu/Centro/Botones/BotonSalir"]
+margin_left = 128.0
+margin_top = 1.0
+margin_right = 200.0
+margin_bottom = 73.0
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcercaDe" type="Button" parent="."]
+margin_left = 64.0
+margin_top = 608.0
+margin_right = 149.0
+margin_bottom = 687.0
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 6 )
+custom_styles/focus = ExtResource( 6 )
+custom_styles/normal = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="AcercaDe"]
+margin_left = 5.33936
+margin_top = 1.33484
+margin_right = 77.3394
+margin_bottom = 73.3348
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="salir" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+
+[node name="seleccion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+
+[node name="Salir" type="Button" parent="."]
+margin_left = 1128.0
+margin_top = 608.0
+margin_right = 1216.0
+margin_bottom = 686.0
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 12 )
+custom_styles/focus = ExtResource( 12 )
+custom_styles/normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Salir"]
+margin_left = 8.0
+margin_right = 80.0
+margin_bottom = 72.0
+texture = ExtResource( 15 )
+
+[connection signal="mouse_entered" from="Menu/Centro/Botones/BotonJugar" to="." method="_on_BotonJugar_mouse_entered"]
+[connection signal="pressed" from="Menu/Centro/Botones/BotonJugar" to="Menu/Centro/Botones/BotonJugar" method="_on_BotonJugar_pressed"]
+[connection signal="mouse_entered" from="Menu/Centro/Botones/BotonInstrucciones" to="." method="_on_BotonInstrucciones_mouse_entered"]
+[connection signal="pressed" from="Menu/Centro/Botones/BotonInstrucciones" to="Menu/Centro/Botones/BotonInstrucciones" method="_on_BotonInstrucciones_pressed"]
+[connection signal="button_up" from="Menu/Centro/Botones/BotonSalir" to="Menu/Centro/Botones/BotonSalir" method="_on_BotonSalir_button_up"]
+[connection signal="mouse_entered" from="Menu/Centro/Botones/BotonSalir" to="." method="_on_BotonSalir_mouse_entered"]
+[connection signal="mouse_entered" from="AcercaDe" to="." method="_on_AcercaDe_mouse_entered"]
+[connection signal="pressed" from="AcercaDe" to="." method="_on_AcercaDe_pressed"]
+[connection signal="button_up" from="Salir" to="." method="_on_Salir_button_up"]
+[connection signal="mouse_entered" from="Salir" to="." method="_on_Salir_mouse_entered"]

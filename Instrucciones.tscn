@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/Fuente.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Atras3.gd" type="Script" id=2]
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=3]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=4]
+[ext_resource path="res://Audio/Seleccion.wav" type="AudioStream" id=5]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+font_data = ExtResource( 7 )
+
+[node name="Instrucciones" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.105882, 0.819608, 0.701961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 18.6877
+margin_top = 10.6787
+margin_right = 253.688
+margin_bottom = 82.6787
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seleccion" type="AudioStreamPlayer" parent="Atras"]
+stream = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Atras"]
+margin_left = 12.0135
+margin_top = 4.00452
+margin_right = 222.014
+margin_bottom = 71.0045
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_shadow = Color( 1, 0.592157, 0, 1 )
+text = "Atras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 301.502
+margin_top = 9.48016
+margin_right = 957.502
+margin_bottom = 89.4802
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.321569, 1, 1 )
+text = "Instrucciones:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -1.0
+margin_top = 93.0
+margin_right = 1278.0
+margin_bottom = 721.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="Label" parent="."]
+margin_left = 13.5596
+margin_top = 93.9435
+margin_right = 1278.56
+margin_bottom = 710.944
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Para estudiantes:
+-Ingrese a la opción \"Iniciar\".
+-Seleccione \"Soy Estudiante\".
+-Elija la actividad que desee resolver.
+-Cada actividad tiene 4 preguntas y cada pregunta tiene un valor de 2 puntos, haciendo un total de 8 puntos por actividad, ademas de contar con un minuto por pregunta haciendo un total de 4 minutos por actividad. Si el tiempo se acaba, la actividad termina.
+-Cada vez que se responda, el Software debuelve una retroalimentación de la respuesta.
+-En todo momento se puede hacer uso del botón de ayuda, solo tenga en cuenta que si se utiliza ayuda y responde correctamente, se le penalizara restandole un punto.
+-Para aprobar cada actividad, se debe alcanzar una nota de 6 / 8 puntos. 
+-Tener en cuenta que, si utiliza ayuda en todas las preguntas, la puntuación final no sera suficiente para aprobar.
+-Si elige \"Interpretación de Datos\": Debe interpretal los valores de la tabla y reponder la pregunta con la respuesta que usted cree es verdadera.
+-Si elige \"Cálculo\": Debe resolver el valor incognito pedido, ingresando los datos y resultado calculados con los valores de la tabla y validar su respuesta.
+-Si se responden todas las preguntas, ingrese a la opción \"Ver Resultado\" para calcular su nota.
+-Si se acaba el tiempo o se desaprueba la actividad, puede ingresar a la opción \"Material de Repaso\", el cual le brindara el contenido digital de la cátedra. "
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="mouse_entered" from="Atras" to="Atras" method="_on_Atras_mouse_entered"]
+[connection signal="pressed" from="Atras" to="Atras" method="_on_Atras_pressed"]

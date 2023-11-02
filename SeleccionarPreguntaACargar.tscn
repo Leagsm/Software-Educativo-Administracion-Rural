@@ -1,0 +1,167 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Fonts/Fuente.tres" type="DynamicFont" id=1]
+[ext_resource path="res://BotonSalirSeleccionado.tres" type="StyleBox" id=2]
+[ext_resource path="res://BotonSalirNoSeleccionado.tres" type="StyleBox" id=3]
+[ext_resource path="res://Fonts/orange juice 2.0.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Imagenes/PREGUNTAS-FRECUENTES-blog (Personalizado).jpg" type="Texture" id=5]
+[ext_resource path="res://Fonts/OrangeJuice.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Imagenes/calculo-de-fechas-en-excel-funciones-fin-mes-fecha-mes-dias360 (Personalizado).jpg" type="Texture" id=7]
+[ext_resource path="res://Imagenes/3c05f873-3581-4cd7-aae1-9e748a303565 (Personalizado).png" type="Texture" id=8]
+[ext_resource path="res://SeleccionarPreguntaACargar.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 4 )
+
+[node name="SeleccionarPreguntaACargar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atras" type="Button" parent="."]
+margin_left = 6.0
+margin_top = 10.0
+margin_right = 235.0
+margin_bottom = 85.0
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/focus = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "Atras"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 38.0
+margin_top = 161.0
+margin_right = -688.0
+margin_bottom = -3.0
+color = Color( 0.113725, 0.752941, 0.603922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = -72.4342
+margin_top = -10.3574
+margin_right = 604.566
+margin_bottom = 174.643
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Interpretar Datos"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/Label"]
+margin_left = 154.841
+margin_top = 161.516
+margin_right = 518.841
+margin_bottom = 588.516
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Interpretacion" type="Button" parent="ColorRect/Label/TextureRect"]
+margin_left = -84.0
+margin_top = -151.0
+margin_right = 470.0
+margin_bottom = 403.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 714.104
+margin_top = 193.005
+margin_right = 1227.1
+margin_bottom = 696.005
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2"]
+margin_left = 89.5712
+margin_top = 12.4255
+margin_right = 432.571
+margin_bottom = 78.4255
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Cálculo"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect2/Label2"]
+margin_left = -37.3756
+margin_top = 72.0813
+margin_right = 389.624
+margin_bottom = 436.081
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Calculo" type="Button" parent="ColorRect2/Label2/TextureRect"]
+margin_left = -49.0
+margin_top = -82.0
+margin_right = 459.0
+margin_bottom = 417.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 252.688
+margin_top = 14.6381
+margin_right = 1117.68
+margin_bottom = 143.638
+color = Color( 0.101961, 0.627451, 0.729412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo" type="Label" parent="ColorRect3"]
+margin_left = 10.0587
+margin_top = 22.0407
+margin_right = 846.059
+margin_bottom = 102.041
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.321569, 1, 1 )
+text = "Elegir pregunta a cargar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Atras" to="." method="_on_Atras_pressed"]
+[connection signal="pressed" from="ColorRect/Label/TextureRect/Interpretacion" to="." method="_on_Interpretacion_pressed"]
+[connection signal="pressed" from="ColorRect2/Label2/TextureRect/Calculo" to="." method="_on_Calculo_pressed"]
